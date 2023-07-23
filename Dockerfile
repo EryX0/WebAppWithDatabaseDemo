@@ -12,6 +12,7 @@ RUN dotnet restore
 COPY . ./
 
 # Build the application
+RUN cd ./WebApp
 RUN dotnet publish -c Release -o out
 
 # Build the runtime image
